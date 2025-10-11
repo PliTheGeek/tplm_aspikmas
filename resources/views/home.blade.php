@@ -15,12 +15,13 @@
     </head>
     <body class="font-sans antialiased bg-gray-50 dark:bg-gray-900">
         <div class="min-h-screen">
-            <!-- Navigation Bar Component -->
+            
             <x-navbar />
 
-            <!-- Hero/Slider Component -->
+            
             <x-slider />
-
+   
+            <section>
             <!-- Features Section -->
             <div id="features" class="py-16 bg-white dark:bg-gray-800">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -141,9 +142,12 @@
                     </div>
                 </div>
             </div>
+            </section>
 
-            <!-- Footer Component -->
+            
             <x-footer />
+
+            
         </div>
     </body>
 </html>
