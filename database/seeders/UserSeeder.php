@@ -10,25 +10,30 @@ use Illuminate\Support\Facades\Hash; // <-- Import Hash facade
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        // 1. Membuat User Admin
+        // 1. Membuat User Super Admin
+        User::create([
+            'name' => 'Super Admin User',
+            'email' => 'superadmin@example.com',
+            'password' => Hash::make('password'), // Ganti password ini
+            'role' => 'superadmin',
+        ]);
+
+        // 2. Membuat User Admin
         User::create([
             'name' => 'Admin User',
             'email' => 'admin@example.com',
-            'password' => Hash::make('password'), // Ganti 'password' dengan password yang aman
+            'password' => Hash::make('password'),
             'role' => 'admin',
         ]);
 
-        // 2. Membuat User Biasa
+        // 3. Membuat User Biasa
         User::create([
             'name' => 'Regular User',
             'email' => 'user@example.com',
-            'password' => Hash::make('password'), // Ganti 'password' dengan password yang aman
-            'role' => 'user',
+            'password' => Hash::make('password'),
+            'role' => 'user', // atau biarkan kosong untuk menggunakan default
         ]);
     }
 }
