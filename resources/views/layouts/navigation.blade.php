@@ -12,6 +12,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
+                            {{ __('Direktori') }}
+                        </x-nav-link>
 
                     {{-- =============================================== --}}
                     {{-- === MENU ADMIN UNTUK TAMPILAN DESKTOP === --}}
@@ -19,6 +22,7 @@
                         <x-nav-link :href="route('admin.karyawan.index')" :active="request()->routeIs('admin.karyawan.*')">
                             {{ __('Kelola Karyawan') }}
                         </x-nav-link>
+                     
                     @endif
                     {{-- =============================================== --}}
 
@@ -73,6 +77,9 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
+                            {{ __('Direktori') }}
+                        </x-nav-link>
 
             {{-- =============================================== --}}
             {{-- === MENU ADMIN UNTUK TAMPILAN MOBILE === --}}
@@ -80,6 +87,7 @@
                 <x-responsive-nav-link :href="route('admin.karyawan.index')" :active="request()->routeIs('admin.karyawan.*')">
                     {{ __('Kelola Karyawan') }}
                 </x-responsive-nav-link>
+               
             @endif
             {{-- =============================================== --}}
             
