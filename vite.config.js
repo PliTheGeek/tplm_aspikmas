@@ -8,10 +8,4 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    server: {
-        proxy: {
-            // Proxy all requests except asset requests to your Laravel app
-            '^(?!.*\\.\\w+$)': 'http://localhost:8000',
-        },
-    },
 });
