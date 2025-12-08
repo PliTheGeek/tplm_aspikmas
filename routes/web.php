@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\KaryawanController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\KasDashboard;
+use App\Livewire\KasList;
+use App\Livewire\KasForm;
+use App\Livewire\KasLaporan;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,6 +23,25 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+// Rute untuk dashboard kas
+Route::middleware(['auth'])->group(function () {
+
+    // Dashboard Kas
+    Route::get('/kas/dashboard', KasDashboard::class)->name('kas.dashboard');
+
+    // Daftar Transaksi
+    Route::get('/kas', KasList::class)->name('kas.index');
+
+    // Tambah Transaksi
+    Route::get('/kas/create', KasForm::class)->name('kas.create');
+
+    // Edit Transaksi
+    Route::get('/kas/{id}/edit', KasForm::class)->name('kas.edit');
+
+    // Laporan Kas
+    Route::get('/kas/laporan', KasLaporan::class)->name('kas.laporan');
 });
 
 // ================================================================
