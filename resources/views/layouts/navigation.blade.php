@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
                             {{ __('Direktori') }}
                         </x-nav-link>
+                    <x-nav-link :href="route('hpp')" :active="request()->routeIs('hpp')">
+                            {{ __('HPP') }}
+                        </x-nav-link>
 
                     {{-- =============================================== --}}
                     {{-- === MENU ADMIN UNTUK TAMPILAN DESKTOP === --}}
@@ -77,9 +80,12 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
+            <x-responsive-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
                             {{ __('Direktori') }}
-                        </x-nav-link>
+                        </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('hpp')" :active="request()->routeIs('hpp')">
+                            {{ __('HPP') }}
+                        </x-responsive-nav-link>
 
             {{-- =============================================== --}}
             {{-- === MENU ADMIN UNTUK TAMPILAN MOBILE === --}}
