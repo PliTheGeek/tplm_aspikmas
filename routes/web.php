@@ -50,6 +50,11 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/direktori', function () {
     return view('direktori');
 })->middleware(['auth'])->name('direktori');
+
+// Rute HPP (Harga Pokok Penjualan) - untuk semua user yang login
+Route::get('/hpp', function () {
+    return view('hpp');
+})->middleware(['auth'])->name('hpp');
 // ================================================================
 
 // GRUP ROUTE UNTUK ADMIN

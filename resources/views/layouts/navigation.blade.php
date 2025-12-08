@@ -15,14 +15,8 @@
                     <x-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
                             {{ __('Direktori') }}
                         </x-nav-link>
-                    <x-nav-link :href="route('kas.dashboard')" :active="request()->routeIs('kas.dashboard')">
-                            {{ __('Dashboard Kas') }}
-                        </x-nav-link>
-                    <x-nav-link :href="route('kas.index')" :active="request()->routeIs('kas.index') || request()->routeIs('kas.create') || request()->routeIs('kas.edit')">
-                            {{ __('Transaksi Kas') }}
-                        </x-nav-link>
-                    <x-nav-link :href="route('kas.laporan')" :active="request()->routeIs('kas.laporan')">
-                            {{ __('Laporan Kas') }}
+                    <x-nav-link :href="route('hpp')" :active="request()->routeIs('hpp')">
+                            {{ __('HPP') }}
                         </x-nav-link>
 
                     {{-- =============================================== --}}
@@ -86,19 +80,12 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
+            <x-responsive-nav-link :href="route('direktori')" :active="request()->routeIs('direktori')">
                             {{ __('Direktori') }}
-                        </x-nav-link>
-            <x-responsive-nav-link :href="route('kas.dashboard')" :active="request()->routeIs('kas.dashboard')">
-                    {{ __('Dashboard Kas') }}
-                </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('kas.index')" :active="request()->routeIs('kas.index') || request()->routeIs('kas.create') || request()->routeIs('kas.edit')">
-                    {{ __('Transaksi Kas') }}
-                </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('kas.laporan')" :active="request()->routeIs('kas.laporan')">
-                    {{ __('Laporan Kas') }}
-                </x-responsive-nav-link>
-            
+                        </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('hpp')" :active="request()->routeIs('hpp')">
+                            {{ __('HPP') }}
+                        </x-responsive-nav-link>
 
             {{-- =============================================== --}}
             {{-- === MENU ADMIN UNTUK TAMPILAN MOBILE === --}}
