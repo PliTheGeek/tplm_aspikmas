@@ -19,6 +19,12 @@
                             {{ __('HPP') }}
                         </x-nav-link>
 
+                    <x-nav-link :href="route('kas.dashboard')" :active="request()->routeIs('kas.dashboard')">
+                        {{ __('Dashboard Kas') }}
+                    </x-nav-link>
+
+                    <!-- lUTPIII , TAMBAHIN DROPDOWN MENU BUAT FITUR KAS -->
+
                     {{-- =============================================== --}}
                     {{-- === MENU ADMIN UNTUK TAMPILAN DESKTOP === --}}
                     @if(in_array(Auth::user()->role, ['admin', 'superadmin']))
