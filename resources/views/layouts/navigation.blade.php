@@ -19,9 +19,36 @@
                             {{ __('HPP') }}
                         </x-nav-link>
 
-                    <x-nav-link :href="route('kas.dashboard')" :active="request()->routeIs('kas.dashboard')">
-                        {{ __('Dashboard Kas') }}
-                    </x-nav-link>
+                    <!-- Dropdown Menu Kas -->
+                    <div class="hidden sm:flex sm:items-center sm:ms-3">
+                        <x-dropdown align="left" width="48">
+                            <x-slot name="trigger">
+                                <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                                    <div>{{ __('Kas') }}</div>
+                                    <div class="ms-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <x-dropdown-link :href="route('kas.dashboard')">
+                                    {{ __('Dashboard Kas') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="route('kas.index')">
+                                    {{ __('Daftar Transaksi') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="route('kas.create')">
+                                    {{ __('Tambah Transaksi') }}
+                                </x-dropdown-link>
+                                <x-dropdown-link :href="route('kas.laporan')">
+                                    {{ __('Laporan Kas') }}
+                                </x-dropdown-link>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
 
                     <!-- lUTPIII , TAMBAHIN DROPDOWN MENU BUAT FITUR KAS -->
 
@@ -92,6 +119,20 @@
             <x-responsive-nav-link :href="route('hpp')" :active="request()->routeIs('hpp')">
                             {{ __('HPP') }}
                         </x-responsive-nav-link>
+
+            <!-- Menu Kas untuk Mobile -->
+            <x-responsive-nav-link :href="route('kas.dashboard')" :active="request()->routeIs('kas.dashboard')">
+                {{ __('Dashboard Kas') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('kas.index')" :active="request()->routeIs('kas.index')">
+                {{ __('Daftar Transaksi') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('kas.create')" :active="request()->routeIs('kas.create')">
+                {{ __('Tambah Transaksi') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('kas.laporan')" :active="request()->routeIs('kas.laporan')">
+                {{ __('Laporan Kas') }}
+            </x-responsive-nav-link>
 
             {{-- =============================================== --}}
             {{-- === MENU ADMIN UNTUK TAMPILAN MOBILE === --}}

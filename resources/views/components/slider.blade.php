@@ -3,44 +3,17 @@
     <div class="slider-container relative w-full h-full">
         <!-- Slide 1 -->
         <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-100">
-            <img src="https://picsum.photos/1200/500?random=1" alt="Slide 1" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <div class="text-center text-white px-4">
-                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Welcome to Our Company</h2>
-                    <p class="text-xl md:text-2xl mb-8">Discover amazing solutions for your business</p>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
-                        Get Started
-                    </button>
-                </div>
-            </div>
+            <img src="{{ asset('images/slide1.jpg') }}" alt="Slide 1" class="w-full h-full object-fill object-top">
         </div>
 
         <!-- Slide 2 -->
         <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
-            <img src="https://picsum.photos/1200/500?random=2" alt="Slide 2" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <div class="text-center text-white px-4">
-                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Innovation at Its Best</h2>
-                    <p class="text-xl md:text-2xl mb-8">Leading the way with cutting-edge technology</p>
-                    <button class="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                </div>
-            </div>
+            <img src="{{ asset('images/slide2.jpg') }}" alt="Slide 2" class="w-full h-full object-cover">
         </div>
 
         <!-- Slide 3 -->
         <div class="slide absolute inset-0 w-full h-full transition-opacity duration-1000 opacity-0">
-            <img src="https://picsum.photos/1200/500?random=3" alt="Slide 3" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <div class="text-center text-white px-4">
-                    <h2 class="text-4xl md:text-6xl font-bold mb-4">Your Success Matters</h2>
-                    <p class="text-xl md:text-2xl mb-8">Partnering with you for exceptional results</p>
-                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
-                        Contact Us
-                    </button>
-                </div>
-            </div>
+            <img src="{{ asset('images/slide3.jpg') }}" alt="Slide 3" class="w-full h-full object-cover">
         </div>
     </div>
 
