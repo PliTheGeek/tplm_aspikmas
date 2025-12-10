@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             // Anda bisa menambahkan seeder lain di sini
+            KasCategorySeeder::class,
         ]);
     }
 }
