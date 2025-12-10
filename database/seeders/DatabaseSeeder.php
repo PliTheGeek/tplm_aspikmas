@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         // Panggil UserSeeder yang baru kita buat
         $this->call([
             UserSeeder::class,
+            KasCategorySeeder::class,
             // Anda bisa menambahkan seeder lain di sini
         ]);
     }
